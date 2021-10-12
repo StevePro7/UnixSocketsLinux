@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"os"
 )
 
 func checkErr(err error) {
@@ -14,15 +13,8 @@ func checkErr(err error) {
 }
 
 func main() {
-	if len(os.Args) != 2 {
 
-		fmt.Println("Usage: echo_client message")
-		os.Exit(1)
-	}
-
-	msg := os.Args[1]
-
-	con, err := net.Dial("udp", "Alienware:7")
+	con, err := net.Dial("tcp", "Alienware:17")
 	checkErr(err)
 	defer func(con net.Conn) {
 		err := con.Close()
@@ -31,6 +23,7 @@ func main() {
 		}
 	}(con)
 
+	msg := ""
 	_, err = con.Write([]byte(msg))
 	checkErr(err)
 

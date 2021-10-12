@@ -31,7 +31,9 @@ Read	read from the socket
 
 UDP socket example
 
-cat /etc/services | grep echo
+cat /etc/services | grep echo | head -4
+
+
 
 
 sudo apt install xinetd
@@ -40,3 +42,46 @@ sudo apt install xinetd
 
 cat /etc/xinetd.d/echo
 
+
+01-UDP
+systemctl start xinetd
+go run echo_client.go stevepro
+
+read udp 127.0.0.1:50366->127.0.1.1:7: read: connection refused
+
+try this
+https://stackoverflow.com/questions/27102500/why-am-i-getting-connection-refused
+
+ufw allow 7/udp
+but not work
+
+try this
+nc  127.0.0.1 7 &> /dev/null; echo $?
+
+https://superuser.com/questions/621870/test-if-a-port-on-a-remote-system-is-reachable-without-telnet
+
+
+02-TCP
+cat /etc/services | grep qotd
+qotd		17/tcp		quote
+
+error
+dial tcp 127.0.1.1:17: connect: connection refused
+
+connection refused means that the por tyou ar trying to connect to is not actually open
+
+
+netstat
+
+
+Connection refused
+update iptables
+
+netstat -nupl|grep 3306
+/etc/iptables/rules		don't live here
+
+OR
+sudo iptables -L
+
+Reference
+https://askubuntu.com/questions/842305/where-is-iptables-in-ubuntu-16-04

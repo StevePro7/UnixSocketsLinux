@@ -1,0 +1,29 @@
+Unix domain sockets in Go
+12/10/2021
+
+https://eli.thegreenplace.net/2019/unix-domain-sockets-in-go
+
+
+UDS
+Unix Domain Sockets combine  convenient API of sockets with higher performance of the other single-host methods
+
+
+UDS
+Unix Domain Socket or IPC [Inter Process Communication] socket is a data communications endpoint
+for exchanging data between processes executing on the same host operating system
+
+USD
+use paths in the filesystem as their addresses
+we can use directory and file permissions to control access to sockets, simplifying authentication
+
+
+
+aa-test
+go build .
+go run main.go
+nc -U /tmp/echo.sock
+
+
+bb-test
+go run server.go
+go run client.go

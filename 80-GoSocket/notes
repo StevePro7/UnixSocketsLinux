@@ -1,0 +1,42 @@
+Go socket
+12/10/2021
+
+https://zetcode.com/golang/socket
+
+Socket programming is low level
+network programming including these low level detaisl
+
+NB:
+networking socket also refers to IP address and port number combo
+
+
+TCP
+reliable
+used by HTTP, SMTP, FTP
+
+UDP
+unreliable
+used by VoIP
+
+
+Go net Package
+
+func Dial(network, address string) (Conn, error)
+opens socket
+
+
+Write	write to the socket
+Read	read from the socket
+
+
+UDP socket example
+
+cat /etc/services | grep echo
+
+
+sudo apt install xinetd
+sudo apt --fix-broken install
+sudo apt install xinetd
+
+cat /etc/xinetd.d/echo
+

@@ -27,3 +27,14 @@ nc -U /tmp/echo.sock
 bb-test
 go run server.go
 go run client.go
+
+client
+https://github.com/eliben/code-for-blog/blob/master/2019/unix-domain-sockets-go/simple-client.go
+
+
+cc-test
+
+
+dd-test
+client
+https://github.com/eliben/code-for-blog/blob/master/2019/unix-domain-sockets-go/rpc-client.go

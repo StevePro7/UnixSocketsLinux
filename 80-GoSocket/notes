@@ -85,3 +85,12 @@ sudo iptables -L
 
 Reference
 https://askubuntu.com/questions/842305/where-is-iptables-in-ubuntu-16-04
+
+
+
+03-HEAD
+04-Req
+
+Essentially the same test but one is
+HTTP Request HEAD
+HTTP Request GET

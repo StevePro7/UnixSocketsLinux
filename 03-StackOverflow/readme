@@ -1,0 +1,10 @@
+Unix Sockets in Go
+13/10/2021
+
+https://stackoverflow.com/questions/2886719/unix-sockets-in-go
+
+
+Seen this code most likely in "01"
+
+go run server.go
+go run client.go

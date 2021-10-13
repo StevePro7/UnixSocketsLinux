@@ -100,8 +100,45 @@ network to host short	ntos
 network to host long	ntol
 
 
-Functions
+IP Address Functions
 https://www.tutorialspoint.com/unix_sockets/ip_address_functions.htm
+
+#include <arpa/inet.h>
 inet_aton
 inet_addr
 inet_ntoa
+
+
+Core Functions
+https://www.tutorialspoint.com/unix_sockets/socket_core_functions.htm
+
+#include <sys/types.h>
+#include <sys/socket.h>
+socket
+connect
+bind
+listen
+accept
+send		sendto
+recv		recvfrom
+close
+shutdown
+select
+
+
+Helper Functions
+https://www.tutorialspoint.com/unix_sockets/socket_helper_functions.htm
+
+#include <sys/types.h>
+#include <unistd.h>
+write
+read
+fork		creates new process
+bzero		like memset
+bcmp
+bcopy
+memset
+
+
+SERVER
+https://www.tutorialspoint.com/unix_sockets/socket_server_example.htm

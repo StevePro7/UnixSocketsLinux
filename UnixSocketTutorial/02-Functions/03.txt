@@ -1,0 +1,17 @@
+#include <arpa/inet.h>
+#include <memory.h>
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+    struct sockaddr_in dest;
+    char *ip;
+
+   memset(&dest, '\0', sizeof(dest));
+   dest.sin_addr.s_addr = inet_addr("68.178.157.132");
+
+    ip = inet_ntoa(dest.sin_addr);
+
+    printf("IP Address is: %s\n", ip);
+    return 0;
+}

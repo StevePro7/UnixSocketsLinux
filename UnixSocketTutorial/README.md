@@ -98,3 +98,10 @@ host to short		htos
 host to long		htol
 network to host short	ntos
 network to host long	ntol
+
+
+Functions
+https://www.tutorialspoint.com/unix_sockets/ip_address_functions.htm
+inet_aton
+inet_addr
+inet_ntoa

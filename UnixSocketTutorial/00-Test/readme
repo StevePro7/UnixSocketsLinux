@@ -1,0 +1,21 @@
+Ensure can launch basic C program first!
+12 Oct 2021
+
+Create folder structure
+mkdir 01-Test
+touch main.C
+
+Launch VS Code
+Open folder
+~/Steven/Cpp/TcpSockets/01-Test
+
+Open main.c
+Write basic Code
+Press F5
+Prompted to complete
+C/C++ (LLDB/GDB)
+/usr/bin/gcc        2nd option for gcc
+
+This action completes .vscode
+tasks.json
+launch.json

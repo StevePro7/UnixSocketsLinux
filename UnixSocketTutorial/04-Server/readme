@@ -2,3 +2,11 @@ Unix Socket - Server Examples
 13 Oct 2021
 
 https://www.tutorialspoint.com/unix_sockets/socket_server_example.htm
+
+
+Issue with read()
+solution must have
+#include <unistd.h>
+
+Reference:
+https://www.linuxhowtos.org/manpages/2/read.htm

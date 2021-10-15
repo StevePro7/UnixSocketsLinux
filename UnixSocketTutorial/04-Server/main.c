@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 
 #include <string.h>
+#include <unistd.h>
 
 int main(int argc, char **argv)
 {
@@ -25,7 +26,7 @@ int main(int argc, char **argv)
 
     // Initialize socket structure.
     bzero((char *)&serv_addr, sizeof(serv_addr));
-    portno = 5900;
+    portno = 4000;
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
@@ -53,8 +54,27 @@ int main(int argc, char **argv)
         perror("ERROR on accept");
         exit(1);
     }
-    
 
-    printf(" the end!!\n");
+    // If connection is established then start communicating.
+    bzero(buffer, 256);
+    n = read( newsockfd, buffer, 255);     
+
+    if (n < 0)
+    {
+        perror("ERROR reading from socket");
+        exit(1);
+    }
+
+    printf("Here is the message %s\n", buffer);
+
+    // Write a response to the client
+    n = write(newsockfd, "I got your message", 10);
+
+    if (n < 0)
+    {
+        perror("ERROR writing to socket");
+        exit(1);
+    }
+    
     return 0;
 }
